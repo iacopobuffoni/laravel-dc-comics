@@ -7,7 +7,11 @@
     </div>
     <div class="product-back">
         <div class="product-box">
-            
+            <h1> {{ $comic->title }} </h1>
+            <p> {{ $comic->description }}</p>
+            <button>
+                <a href="{{ route('comics.index') }}"> Torna indietro </a>
+            </button>
         </div>
     </div>
     <footer>

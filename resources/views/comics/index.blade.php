@@ -12,7 +12,7 @@
                 <img src="{{ $comic->thumb }}" alt="">
                 <h4> {{ $comic->title }} </h4>
                 <button>
-                    <a href=""> Vedi dettagli </a>
+                    <a href="{{ route('comics.show', $comic->id) }}"> Vedi dettagli </a>
                 </button>
             </div>
             @endforeach

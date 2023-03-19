@@ -6,6 +6,9 @@
 
     </div>
     <div class="product-back">
+        <button>
+            <a href="{{ route('comics.create')}}"> Crea nuovo Comic </a>
+        </button>
         <div class="product-box">
             @foreach ($comics as $comic)
             <div class="card">

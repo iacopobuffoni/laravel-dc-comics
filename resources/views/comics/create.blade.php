@@ -7,8 +7,36 @@
     </div>
     <div class="product-back">
         <div class="product-box">
-            
+            <h1> Crea un prodotto </h1>
         </div>
+        <form action="{{ route('comics.store')}}" method="post">
+            @csrf
+            <div>
+                <label for="title"> Titolo </label>
+                <input type="text" name="title" id="title" required maxlength="255">
+            </div>
+            <div>
+                <label for="type"> Tipo </label>
+                <select name="type" id="type">
+                    <option selected> Seleziona un tipo </option>
+                    <option value="comic"> Comic </option>
+                    <option value="novel"> Novel </option>
+                    <option value="romanzo"> Romanzo </option>
+
+                </select>
+            </div>
+            <div>
+                <label for="price"> Prezzo </label>
+                <input type="number" step="0.01" name="price" id="price" required maxlength="255">
+            </div>
+            <div>
+                <label for="description"></label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button type="submit"> Salva </button>
+            </div>
+        </form>
     </div>
     <footer>
         <div class="main-footer-bar">

@@ -7,13 +7,9 @@
     </div>
     <div class="product-back">
         <div class="product-box">
-            @foreach ($comics as $comic)
-            <div class="card">
-                <img src="{{ $comic->thumb }}" alt="">
-                <h4> {{ $comic->title }} </h4>
-                <a href="#" class="btn btn-primary"> Vedi dettagli </a>
-            </div>
-            @endforeach
+            <button>
+                <a href="{{ route('comics.index') }}"> Vedi tutti i Comics </a>
+            </button>
         </div>
     </div>
     <footer>

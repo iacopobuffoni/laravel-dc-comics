@@ -9,6 +9,9 @@
             <div class="product-box">
                 <h1> Crea un prodotto </h1>
             </div>
+            <button>
+                <a href="{{ route('comics.index') }}"> Torna indietro </a>
+            </button>
             <form action="{{ route('comics.store') }}" method="post">
                 @csrf
                 <div>

@@ -12,6 +12,18 @@
             <button>
                 <a href="{{ route('comics.index') }}"> Torna indietro </a>
             </button>
+            @if ($errors->any())
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>
+                                {{ $error }}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                
+            @endif
             <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="post">
                 @csrf
 

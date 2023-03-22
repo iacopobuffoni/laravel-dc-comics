@@ -27,6 +27,7 @@
                 <button type="submit">
                     Elimina
                 </button>
+                </form>
             </div>
             @endforeach
         </div>
